@@ -9,14 +9,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
     <style>
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
-
       @keyframes slideInFromTop {
         from {
           transform: translateY(-50px);
@@ -27,30 +22,39 @@
           opacity: 1;
         }
       }
+      @keyframes slideInFromLeft {
+        from {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideInFromRight {
+        from {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
-      <div
-        class="logo"
-        style="animation: slideInFromTop 0.8s ease-out 0.2s both"
-      >
+      <div class="logo" style="animation: slideInFromTop 0.8s ease-out 0.2s both">
         <img src="/images/logo_horizontal.jpg" alt="Logo Tukit" />
       </div>
       <nav>
         <ul class="nav-links">
-          <li style="animation: fadeIn 0.6s ease-out 0.4s both">
-            <a th:href="@{/}">Inicio</a>
-          </li>
-          <li style="animation: fadeIn 0.6s ease-out 0.5s both">
-            <a th:href="@{/caracteristicas}">Características</a>
-          </li>
-          <li class="current" style="animation: fadeIn 0.6s ease-out 0.6s both">
-            <a th:href="@{/proyecto}">Nosotros</a>
-          </li>
-          <li style="animation: fadeIn 0.6s ease-out 0.7s both">
-            <a th:href="@{/planes}">Planes</a>
-          </li>
+          <li style="animation: fadeIn 0.6s ease-out 0.4s both"><a th:href="@{/}">Inicio</a></li>
+          <li style="animation: fadeIn 0.6s ease-out 0.5s both"><a th:href="@{/caracteristicas}">Características</a></li>
+          <li class="current" style="animation: fadeIn 0.6s ease-out 0.6s both"><a th:href="@{/proyecto}">Nosotros</a></li>
+          <li style="animation: fadeIn 0.6s ease-out 0.7s both"><a th:href="@{/planes}">Planes</a></li>
         </ul>
       </nav>
     </header>
@@ -62,36 +66,52 @@
       </section>
 
       <div class="content-container">
+        <!-- Sección Visión (imagen izquierda, texto derecha) -->
         <section class="vision-section">
-          <div class="section-header">
-            <div class="icon-circle">
-              <img src="/images/icons/vision.png" alt="Visión" />
+          <div class="section-content vision-layout">
+            <div class="image-container" style="animation: slideInFromLeft 0.8s ease-out 0.4s both">
+              <img src="/images/vision-image.jpg" alt="Imagen representando la visión" class="section-image" />
             </div>
-            <h2>Visión</h2>
+            <div class="text-container" style="animation: slideInFromRight 0.8s ease-out 0.6s both">
+              <div class="section-header">
+                <div class="icon-circle">
+                  <img src="/images/icons/vision.png" alt="Visión" />
+                </div>
+                <h2>Visión</h2>
+              </div>
+              <p>
+                Ser la plataforma líder en Latinoamérica para la compra y venta de
+                libros de segunda mano, promoviendo el acceso equitativo a la
+                educación y fomentando una cultura de reutilización responsable
+                entre estudiantes, familias y lectores en general.
+              </p>
+            </div>
           </div>
-          <p>
-            Ser la plataforma líder en Latinoamérica para la compra y venta de
-            libros de segunda mano, promoviendo el acceso equitativo a la
-            educación y fomentando una cultura de reutilización responsable
-            entre estudiantes, familias y lectores en general.
-          </p>
         </section>
 
+        <!-- Sección Misión (texto izquierda, imagen derecha) -->
         <section class="mission-section">
-          <div class="section-header">
-            <div class="icon-circle">
-              <img src="/images/icons/mission.png" alt="Misión" />
+          <div class="section-content mission-layout">
+            <div class="text-container" style="animation: slideInFromLeft 0.8s ease-out 0.4s both">
+              <div class="section-header">
+                <div class="icon-circle">
+                  <img src="/images/icons/mission.png" alt="Misión" />
+                </div>
+                <h2>Misión</h2>
+              </div>
+              <p>
+                Brindar una solución confiable, accesible y eficiente para la
+                comunidad educativa y cultural, facilitando el intercambio, la
+                compra y venta de libros de segunda mano. Queremos construir una red
+                de confianza entre vendedores, compradores y aliados del ecosistema
+                educativo, donde el acceso a los libros deje de ser un privilegio y
+                se convierta en una opción para todos.
+              </p>
             </div>
-            <h2>Misión</h2>
+            <div class="image-container" style="animation: slideInFromRight 0.8s ease-out 0.6s both">
+              <img src="/images/mission-image.jpg" alt="Imagen representando la misión" class="section-image" />
+            </div>
           </div>
-          <p>
-            Brindar una solución confiable, accesible y eficiente para la
-            comunidad educativa y cultural, facilitando el intercambio, la
-            compra y venta de libros de segunda mano. Queremos construir una red
-            de confianza entre vendedores, compradores y aliados del ecosistema
-            educativo, donde el acceso a los libros deje de ser un privilegio y
-            se convierta en una opción para todos.
-          </p>
         </section>
 
         <section class="slogan-section">

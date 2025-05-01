@@ -1,313 +1,303 @@
-/* Hero section */
-.hero-section {
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Hero section */
+  .hero-section {
     text-align: center;
-    padding: 75px 5% 120px;
+    padding: 100px 5% 120px;
     background: linear-gradient(135deg, #1d8ee0 0%, #1292db 100%);
     color: white;
     position: relative;
     overflow: hidden;
-}
-
-.hero-section h1 {
+  }
+  
+  .hero-section h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     animation: slideUpFadeIn 0.8s ease-out forwards;
-}
-
-.hero-wave {
-  position: absolute;
-  width: 100%;
-  height: 143px;
-  bottom: 0;
-  left: 0;
-  background: url("/images/wave.png");
-  animation: animate 10s linear infinite;
-}
-
-/* Content container */
-.content-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 5%;
-  position: relative;
-  z-index: 1;
-}
-
-/* Sections */
-.vision-section,
-.mission-section {
-  margin-bottom: 60px;
-  padding: 40px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  position: relative;
-  overflow: hidden;
-}
-
-.vision-section {
-    animation: slideUpFadeIn 0.8s ease-out 0.2s forwards;
+  }
+  
+  .hero-wave {
+    position: absolute;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background: url("/images/wave.png");
+    animation: animate 10s linear infinite;
+  }
+  
+  /* Content container */
+  .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Layout de las secciones */
+  .section-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  /* Visión: imagen izquierda, texto derecha */
+  .vision-layout {
+    flex-direction: row;
+  }
+  
+  /* Misión: texto izquierda, imagen derecha */
+  .mission-layout {
+    flex-direction: row;
+  }
+  
+  .image-container {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente oculto para animación */
+  }
+  
+  .text-container {
+    flex: 1;
+    padding: 20px;
+    opacity: 0; /* Inicialmente oculto para animación */
+  }
+  
+  .section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .section-image:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Estilos para los bloques de texto */
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #e4f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    animation: bounceIn 0.6s ease-out forwards;
     opacity: 0;
-}
-
-.mission-section {
-    animation: slideUpFadeIn 0.8s ease-out 0.4s forwards;
-    opacity: 0;
-}
-
-.slogan-section {
+    animation-delay: 0.3s;
+  }
+  
+  .icon-circle img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #1292db;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  /* Slogan section */
+  .slogan-section {
+    text-align: center;
+    margin-top: 80px;
     animation: slideUpFadeIn 0.8s ease-out 0.6s forwards;
     opacity: 0;
-}
-
-/* Efecto hover para las secciones */
-.vision-section:hover, .mission-section:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.icon-circle {
-  width: 70px;
-  height: 70px;
-  background-color: #e4f2fd;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  animation: bounceIn 0.6s ease-out forwards;
-opacity: 0;
-animation-delay: 0.3s;
-}
-
-.icon-circle img {
-  width: 35px;
-  height: 35px;
-}
-
-h2 {
-  font-size: 1.8rem;
-  color: #1292db;
-}
-
-p {
-  color: #555;
-  line-height: 1.8;
-  font-size: 1.1rem;
-}
-
-/* Slogan section */
-.slogan-section {
-  text-align: center;
-  margin-top: 80px;
-}
-
-.slogan-box {
-  display: inline-block;
-  padding: 30px 50px;
-  background: linear-gradient(135deg, #1d8ee0 0%, #1292db 100%);
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-  animation: scaleIn 0.6s ease-out forwards;
-  opacity: 0;
-  animation-delay: 0.8s;
-  transform-origin: center;
-}
-
-.slogan-box h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.slogan-box p {
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 600px;
-}
-
-/* Wave container */
-.wave-container {
-  position: relative;
-  background: #f8fafc;
-  margin-top: -1px;
-}
-
-.wave {
-  position: absolute;
-  width: 100%;
-  height: 143px;
-  bottom: 0;
-  left: 0;
-  background: url("/images/wave.png");
-  animation: animate 10s linear infinite;
-}
-
-.wave:before {
-  content: "";
-  width: 100%;
-  height: 143px;
-  background: url("/images/wave.png");
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.4;
-  animation: animate-reverse 10s linear infinite;
-}
-
-.wave:after {
-  content: "";
-  width: 100%;
-  height: 143px;
-  background: url("/images/wave.png");
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.6;
-  animation-delay: -5s;
-  animation: animate 20s linear infinite;
-}
-
-/* Animaciones */
-@keyframes animate {
-  0% {
-    background-position-x: 0;
   }
-  100% {
-    background-position-x: 1360px;
-  }
-}
-
-@keyframes animate-reverse {
-  0% {
-    background-position-x: 1360px;
-  }
-  100% {
-    background-position-x: 0;
-  }
-}
-
-@keyframes slideUpFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes rotateIn {
-  from {
-    transform: rotate(-5deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .nav-links {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-section {
-    padding: 80px 20px 100px;
-  }
-
-  .hero-section h1 {
-    font-size: 2.2rem;
-  }
-
-  .content-container {
-    padding: 40px 20px;
-  }
-
-  .vision-section,
-  .mission-section {
-    padding: 30px;
-  }
-
-  .section-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .icon-circle {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
+  
   .slogan-box {
-    padding: 25px 30px;
+    display: inline-block;
+    padding: 30px 50px;
+    background: linear-gradient(135deg, #1d8ee0 0%, #1292db 100%);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
   }
-}
-
-@media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 1.8rem;
-  }
-
-  .icon-circle {
-    width: 60px;
-    height: 60px;
-  }
-
-  .icon-circle img {
-    width: 30px;
-    height: 30px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
+  
   .slogan-box h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 15px;
   }
-}
+  
+  .slogan-box p {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+  }
+  
+  /* Wave container */
+  .wave-container {
+    position: relative;
+    background: #f8fafc;
+    margin-top: -1px;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background: url("/images/wave.png");
+    animation: animate 10s linear infinite;
+  }
+  
+  /* Animaciones */
+  @keyframes animate {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: 1360px;
+    }
+  }
+  
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 80px 20px 100px;
+    }
+  
+    .hero-section h1 {
+      font-size: 2.2rem;
+    }
+  
+    .section-content,
+    .vision-layout,
+    .mission-layout {
+      flex-direction: column;
+    }
+  
+    .image-container {
+      min-width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .section-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .icon-circle {
+      margin: 0 auto 20px;
+    }
+  
+    .slogan-box {
+      padding: 25px 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section h1 {
+      font-size: 1.8rem;
+    }
+  
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .icon-circle img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .slogan-box h3 {
+      font-size: 1.5rem;
+    }
+  }
