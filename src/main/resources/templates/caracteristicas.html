@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tukit - Características</title>
+    <link rel="stylesheet" th:href="@{/styles/caracteristicas.css}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromTop {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div
+        class="logo"
+        style="animation: slideInFromTop 0.8s ease-out 0.2s both"
+      >
+        <img src="/images/logo_horizontal.jpg" alt="Logo Tukit" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li style="animation: fadeIn 0.6s ease-out 0.4s both">
+            <a th:href="@{/}">Inicio</a>
+          </li>
+          <li class="current" style="animation: fadeIn 0.6s ease-out 0.5s both">
+            <a th:href="@{/caracteristicas}">Características</a>
+          </li>
+          <li style="animation: fadeIn 0.6s ease-out 0.6s both">
+            <a th:href="@{/proyecto}">El proyecto</a>
+          </li>
+          <li style="animation: fadeIn 0.6s ease-out 0.7s both">
+            <a th:href="@{/planes}">Planes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="features-main">
+      <div class="hero-wave-container">
+        <section class="hero-section">
+          <h1>Potencia tus intercambios escolares</h1>
+          <p class="subtitle">
+            Descubre cómo Tukit revoluciona la forma de conseguir tus materiales
+          </p>
+        </section>
+        <div class="hero-wave"></div>
+      </div>
+      <div class="wave-container">
+        <section class="wave-section">
+          <div class="wave"></div>
+          <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/auction.png}" alt="Subasta" />
+              </div>
+              <h3>Solicitud y subasta</h3>
+              <p>
+                Crea una solicitud por el libro que necesites e inicia una
+                subasta por él
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/offer.png}" alt="Ofertas" />
+              </div>
+              <h3>Ofertas directas</h3>
+              <p>
+                Propón trueques o crea ofertas filtradas con precios mínimos a
+                través del chat integrado
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/clock.png}" alt="Tiempo" />
+              </div>
+              <h3>Tiempo personalizado</h3>
+              <p>
+                Cada solicitud se publicará por 24 horas, cualquier ofertante
+                puede modificar su oferta en ese tiempo
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/filter.png}" alt="Filtro" />
+              </div>
+              <h3>Filtrado inteligente</h3>
+              <p>
+                Filtra las ofertas recibidas a tu solicitud pasadas las 24 horas
+                según la calidad de los libros con su estado actual y sus foto
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/map.png}" alt="Mapa" />
+              </div>
+              <h3>Seguimiento en tiempo real</h3>
+              <p>
+                Si te gusta una oferta, acéptala, paga y podrás visualizar la
+                ruta en un mapa con tu pedido en camino
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/game.png}" alt="Juegos" />
+              </div>
+              <h3>Trivia y descuentos</h3>
+              <p>
+                Juega trivia o memoria para ganar puntos canjeables por
+                descuentos
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+
+            <!-- Feature 7 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/collection.png}" alt="Colección" />
+              </div>
+              <h3>Gestión de colección</h3>
+              <p>
+                Crea tu lista de libros y publica ofertas automáticas con un
+                solo clic
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+
+            <!-- Feature 8 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img th:src="@{/images/icons/school.png}" alt="Escuela" />
+              </div>
+              <h3>Lista de útiles</h3>
+              <p>
+                Carga tu lista de útiles escolares, selecciona lo que necesites
+                y cómpralo
+              </p>
+              <div class="highlight-bar"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="features-footer">
+      <p>© 2025 Tukit - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
