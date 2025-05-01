@@ -1,0 +1,208 @@
+body {
+    background-color: #f0c444;
+}
+
+/* Animaciones */
+@keyframes slideUpFadeIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes animate {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1360px; }
+}
+
+@keyframes animate-reverse {
+    0% { background-position-x: 1360px; }
+    100% { background-position-x: 0; }
+}
+
+/* Hero section */
+.hero-section {
+    text-align: center;
+    padding: 75px 5% 120px;
+    background: white;
+    color: #1d8ee0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slideUpFadeIn 0.8s ease-out forwards;
+  }
+  
+  .hero-wave {
+    position: absolute;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background: url("/images/wave_yellow.png");
+    animation: animate 10s linear infinite;
+  }
+
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Contenedor de planes */
+.plans-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5% 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjetas de planes */
+.plan-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    animation: slideUpFadeIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.plan-card:nth-child(1) { animation-delay: 0.2s; }
+.plan-card:nth-child(2) { animation-delay: 0.4s; }
+.plan-card:nth-child(3) { animation-delay: 0.6s; }
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.plan-card h2 {
+    font-size: 1.8rem;
+    color: #1292db;
+    margin-bottom: 15px;
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1d8ee0;
+    margin: 20px 0;
+}
+
+.plan-features {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.plan-features li {
+    padding: 8px 0;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.plan-features li:before {
+    content: "✓";
+    color: #1d8ee0;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Botón de selección */
+.select-plan-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #1d8ee0;
+    color: white;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.select-plan-btn:hover {
+    background: #0e5384;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Medallas */
+.plan-medal {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.plan-medal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.plan-card:hover .plan-medal {
+    transform: translateY(-5px) rotate(15deg);
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .plans-container {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+    
+    .hero-section {
+        padding: 80px 20px 100px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-card {
+        padding: 25px 20px;
+    }
+    
+    .plan-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .plan-price {
+        font-size: 1.5rem;
+    }
+    
+    .plan-medal {
+        width: 60px;
+        height: 60px;
+        top: -20px;
+        right: -20px;
+    }
+}
+
+.footer {
+  background-color: #f0c444;
+}

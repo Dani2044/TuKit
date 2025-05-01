@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tukit - Planes</title>
+    <link rel="stylesheet" th:href="@{/styles/header_footer.css}" />
+    <link rel="stylesheet" th:href="@{/styles/plan.css}" />
+    <style>
+      /* Animaciones iniciales */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromTop {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromLeft {
+        from {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromRight {
+        from {
+          transform: translateX(100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div
+        class="logo"
+        style="animation: slideInFromTop 0.8s ease-out 0.2s both"
+      >
+        <img src="/images/logo_horizontal.jpg" alt="Logo Tukit" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li style="animation: fadeIn 0.6s ease-out 0.4s both">
+            <a th:href="@{/}">Inicio</a>
+          </li>
+          <li style="animation: fadeIn 0.6s ease-out 0.5s both">
+            <a th:href="@{/caracteristicas}">Características</a>
+          </li>
+          <li style="animation: fadeIn 0.6s ease-out 0.6s both">
+            <a th:href="@{/proyecto}">Nosotros</a>
+          </li>
+          <li class="current" style="animation: fadeIn 0.6s ease-out 0.7s both">
+            <a th:href="@{/planes}">Planes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+          <h1>Planes mensuales</h1>
+          <div class="hero-wave"></div>
+        </section>
+
+      <div class="plans-container">
+        <!-- Plan Básico -->
+        <div class="plan-card">
+          <div class="plan-medal bronze">
+            <img src="/images/bronze-medal.png" alt="Medalla Bronce" />
+          </div>
+          <h2>Básico</h2>
+          <div class="plan-price">GRATIS</div>
+          <ul class="plan-features">
+            <li>Limitación a 2 productos ofertados y solicitados</li>
+            <li>Visualización en mapas básica</li>
+            <li>Limitación de mensajes en chat de negociación</li>
+            <li>Anuncios externos</li>
+          </ul>
+          <button class="select-plan-btn">SELECCIONAR PLAN</button>
+        </div>
+
+        <!-- Plan Premium -->
+        <div class="plan-card">
+          <div class="plan-medal silver">
+            <img src="/images/silver-medal.png" alt="Medalla Plata" />
+          </div>
+          <h2>Premium</h2>
+          <div class="plan-price">10,000 COP</div>
+          <ul class="plan-features">
+            <li>Priorización de tus solicitudes y ofertas</li>
+            <li>Sin limitaciones de productos ofertados/solicitados</li>
+            <li>Visualización completa en mapas</li>
+            <li>Sin limitaciones de mensajes en el chat</li>
+            <li>Sin anuncios externos</li>
+          </ul>
+          <button class="select-plan-btn">SELECCIONAR PLAN</button>
+        </div>
+
+        <!-- Plan Lucky Box -->
+        <div class="plan-card">
+          <div class="plan-medal gold">
+            <img src="/images/gold-medal.png" alt="Medalla Oro" />
+          </div>
+          <h2>Lucky Box</h2>
+          <div class="plan-price">50,000 COP</div>
+          <ul class="plan-features">
+            <li>Todos los beneficios del plan Premium</li>
+            <li>Libro de lectura sorpresa mensual</li>
+            <li>Libro nuevo o usado según tu preferencia</li>
+            <li>Selección por género o editorial</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <button class="select-plan-btn">SELECCIONAR PLAN</button>
+        </div>
+      </div>
+    </main>
+    <footer class="features-footer">
+      <p>© 2025 Tukit - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>

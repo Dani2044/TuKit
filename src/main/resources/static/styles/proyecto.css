@@ -1,17 +1,17 @@
 /* Hero section */
 .hero-section {
-  text-align: center;
-  padding: 100px 5% 120px;
-  background: linear-gradient(135deg, #1d8ee0 0%, #1292db 100%);
-  color: white;
-  position: relative;
-  overflow: hidden;
+    text-align: center;
+    padding: 75px 5% 120px;
+    background: linear-gradient(135deg, #1d8ee0 0%, #1292db 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  animation: slideUpFadeIn 0.8s ease-out forwards;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slideUpFadeIn 0.8s ease-out forwards;
 }
 
 .hero-wave {
@@ -46,20 +46,24 @@
 }
 
 .vision-section {
-  animation: slideUpFadeIn 0.8s ease-out 0.2s forwards;
-  opacity: 0;
+    animation: slideUpFadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
 }
 
 .mission-section {
-  animation: slideUpFadeIn 0.8s ease-out 0.4s forwards;
-  opacity: 0;
+    animation: slideUpFadeIn 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.slogan-section {
+    animation: slideUpFadeIn 0.8s ease-out 0.6s forwards;
+    opacity: 0;
 }
 
 /* Efecto hover para las secciones */
-.vision-section:hover,
-.mission-section:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
+.vision-section:hover, .mission-section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
 }
 
 .section-header {
@@ -78,8 +82,8 @@
   justify-content: center;
   margin-right: 20px;
   animation: bounceIn 0.6s ease-out forwards;
-  opacity: 0;
-  animation-delay: 0.3s;
+opacity: 0;
+animation-delay: 0.3s;
 }
 
 .icon-circle img {
@@ -102,8 +106,6 @@ p {
 .slogan-section {
   text-align: center;
   margin-top: 80px;
-  animation: slideUpFadeIn 0.8s ease-out 0.6s forwards;
-  opacity: 0;
 }
 
 .slogan-box {
