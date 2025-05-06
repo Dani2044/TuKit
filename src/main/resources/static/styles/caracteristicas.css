@@ -219,6 +219,10 @@
     padding: 15px;
   }
 
+  .logo img {
+    height: 30px;
+  }
+
   .nav-links {
     margin-top: 15px;
     flex-wrap: wrap;
