@@ -130,6 +130,7 @@ body {
   color: #555;
   position: relative;
   padding-left: 25px;
+  line-height: 1.6;
 }
 
 .plan-features li:before {
