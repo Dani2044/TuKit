@@ -47,23 +47,18 @@
 .svg-phone-container {
   position: relative;
   width: 50%;
-  height: 500px;
+  height: 550px;
   margin-top: -60px;
   overflow: hidden;
 }
 
 .wrapper {
   position: absolute;
-  width: 135%;
-  height: 124%;
+  width: 135%; /* Aumentado de 135% */
+  height: 124%; /* Aumentado de 124% */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.wrapper svg {
-  width: 100%;
-  height: 100%;
 }
 
 .floating-phone {
@@ -71,11 +66,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 65%;
-  max-height: 380px;
+  height: 80%; /* Aumentado de 65% */
+  /*  max-height: 600px;  Aumentado de 380px */
   z-index: 3;
   transition: transform 0.5s ease;
 }
+
+.wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
 
 .floating-phone:hover {
   transform: translate(-50%, -50%) scale(1.05) rotate(5deg);
@@ -115,7 +116,7 @@
 
   .svg-phone-container {
     width: 100%;
-    height: 280px;
+    height: 340px; /* Aumentado de 280px */
     margin-top: -40px;
   }
 
@@ -128,15 +129,22 @@
   }
 
   .floating-phone {
-    height: 70%;
-    max-height: 240px;
+    height: 80%; /* Aumentado de 70% */
+    max-height: 300px; /* Aumentado de 240px */
     transform: translate(-50%, -50%);
   }
 
-  .download-badge img {
-    height: 40px;
+  .download-badge {
+    margin-top: 4.5rem; /* Aumentado desde 1rem */
+    margin-bottom: 4rem; /* Añadir margen inferior para separar del celular */
   }
+
+
 }
+
+
+
+
 
 @media (max-width: 480px) {
   .nav-links {
@@ -154,13 +162,19 @@
   }
 
   .floating-phone {
-    max-height: 220px;
+    max-height: 260px; /* Aumentado de 220px */
     transform: translate(-50%, -50%);
   }
 
   .svg-phone-container {
-    height: 220px;
+    height: 260px; /* Aumentado de 220px */
   }
+
+  .download-badge {
+    margin-top: 4.5rem; /* Aumentado desde 1rem */
+    margin-bottom: 4rem; /* Añadir margen inferior para separar del celular */
+  }
+
 }
 
 /* Animaciones */
