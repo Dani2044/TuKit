@@ -1,261 +1,239 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tukit - Características</title>
-    <link rel="stylesheet" th:href="@{/styles/caracteristicas.css}" />
-    <link rel="stylesheet" th:href="@{/styles/header_footer.css}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tukit - Características</title>
+  <link rel="stylesheet" th:href="@{/styles/caracteristicas.css}" />
+  <link rel="stylesheet" th:href="@{/styles/header_footer.css}" />
+  <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  />
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
       }
-
-      @keyframes slideInFromTop {
-        from {
-          transform: translateY(-50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
+      to {
+        opacity: 1;
       }
+    }
 
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
+    @keyframes slideInFromTop {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
       }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
+      to {
+        transform: translateY(0);
+        opacity: 1;
       }
+    }
 
-      @keyframes slideInFromLeft {
-        from {
-          transform: translateX(-50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
       }
-      @keyframes slideInFromRight {
-        from {
-          transform: translateX(50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
+      50% {
+        transform: translateY(-10px);
       }
-    </style>
-  </head>
-  <body>
-  <header>
-    <div
-           class="logo"
-            style="animation: slideInFromTop 0.8s ease-out 0.2s both"
-    >
-      <img src="/images/logo_horizontal.jpg" alt="Logo Tukit" />
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li  style="animation: fadeIn 0.6s ease-out 0.4s both">
-          <a th:href="@{/}">Inicio</a>
-        </li>
-        <li class="current" style="animation: fadeIn 0.6s ease-out 0.5s both">
-          <a th:href="@{/caracteristicas}">Características</a>
-        </li>
-        <li style="animation: fadeIn 0.6s ease-out 0.6s both">
-          <a th:href="@{/proyecto}">Nosotros</a>
-        </li>
-        <li style="animation: fadeIn 0.6s ease-out 0.7s both">
-          <a th:href="@{/planes}">Planes</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-    <main class="features-main">
-      <section class="hero-section">
-        <h1>Potencia tus intercambios escolares</h1>
-        <p class="subtitle">
-          Descubre cómo Tukit revoluciona la forma de conseguir tus materiales
-        </p>
-      </section>
+      100% {
+        transform: translateY(0px);
+      }
+    }
 
-      <div class="features-container">
-        <div class="features-grid">
-          <!-- Feature 1 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 0.3s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_solicitud.png}" alt="Subasta" />
-            </div>
-            <h3>Solicitud y subasta</h3>
-            <p>
-              Crea una solicitud por el libro que necesites e inicia una subasta
-              por él.
-            </p>
-            <div class="highlight-bar"></div>
-          </div>
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
-          <!-- Feature 2 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 0.4s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_oferta.png}" alt="Ofertas" />
-            </div>
-            <h3>Ofertas directas</h3>
-            <p>
-              Propón trueques o crea ofertas filtradas con precios mínimos a
-              través del chat integrado.
-            </p>  
-            <div class="highlight-bar"></div>
-          </div>
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideInFromRight {
+      from {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div
+          class="logo"
+          style="animation: slideInFromTop 0.8s ease-out 0.2s both"
+  >
+    <img src="/images/logo_horizontal.jpg" alt="Logo Tukit" />
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li  style="animation: fadeIn 0.6s ease-out 0.4s both">
+        <a th:href="@{/}">Inicio</a>
+      </li>
+      <li class="current" style="animation: fadeIn 0.6s ease-out 0.5s both">
+        <a th:href="@{/caracteristicas}">Características</a>
+      </li>
+      <li style="animation: fadeIn 0.6s ease-out 0.6s both">
+        <a th:href="@{/proyecto}">Nosotros</a>
+      </li>
+      <li style="animation: fadeIn 0.6s ease-out 0.7s both">
+        <a th:href="@{/planes}">Planes</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="features-main">
+  <section class="hero-section">
+    <h1>Menos filas, más tiempo en familia</h1>
+    <p class="subtitle">
+      Descubre cómo Tukit revoluciona la forma de conseguir tu lista de útiles
+    </p>
+  </section>
 
-          <!-- Feature 3 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 0.5s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_24horas.png}" alt="Tiempo" />
-            </div>
-            <h3>Tiempo personalizado</h3>
-            <p>
-              Cada solicitud se publicará por 24 horas, cualquier ofertante
-              puede modificar su oferta en ese tiempo.
-            </p>
-            <div class="highlight-bar"></div>
-          </div>
-
-          <!-- Feature 4 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 0.6s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_imagenes.png}" alt="Filtro" />
-            </div>
-            <h3>Filtrado inteligente</h3>
-            <p>
-              Filtra las ofertas recibidas a tu solicitud pasadas las 24 horas
-              según la calidad de los libros con su estado actual y sus foto.
-            </p>
-            <div class="highlight-bar"></div>
-          </div>
-
-          <!-- Feature 5 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 0.7s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_mapa.png}" alt="Mapa" />
-            </div>
-            <h3>Seguimiento en tiempo real</h3>
-            <p>
-              Si te gusta una oferta, acéptala, paga y podrás visualizar la ruta
-              en un mapa con tu pedido en camino.
-            </p>
-            <div class="highlight-bar"></div>
-          </div>
-
-          <!-- Feature 6 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 0.8s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_descuentos.png}" alt="Juegos" />
-            </div>
-            <h3>Trivia y descuentos</h3>
-            <p>
-              Juega trivia o memoria para ganar puntos canjeables por
-              descuentos.
-            </p>
-            <div class="highlight-bar"></div>
-          </div>
-
-          <!-- Feature 7 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 0.9s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_automatizar.png}" alt="Colección" />
-            </div>
-            <h3>Gestión de colección</h3>
-            <p>
-              Crea tu lista de libros y publica ofertas automáticas con un solo
-              clic.
-            </p>
-            <div class="highlight-bar"></div>
-          </div>
-
-          <!-- Feature 8 -->
-          <div
-            class="feature-card"
-            style="animation-delay: 1s"
-          >
-            <div class="feature-icon">
-              <img th:src="@{/images/icono_carrito.png}" alt="Escuela" />
-            </div>
-            <h3>Lista de útiles</h3>
-            <p>
-              Carga tu lista de útiles escolares, selecciona lo que necesites y
-              cómpralo.
-            </p>
-            <div class="highlight-bar"></div>
-          </div>
+  <div class="features-container">
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div
+              class="feature-card"
+              style="animation-delay: 0.3s"
+      >
+        <div class="feature-icon">
+          <img th:src="@{/images/icono_personalizacion.png}" alt="Personalización" />
         </div>
+        <h3>Selección Personalizada</h3>
+        <p>
+          Permite que tus hijos elijan sus útiles escolares preferidos a través de nuestra plataforma web y aplicación móvil.
+        </p>
+        <div class="highlight-bar"></div>
       </div>
 
-      <div class="wave-container">
-        <div class="wave"></div>
+      <!-- Feature 2 -->
+      <div
+              class="feature-card"
+              style="animation-delay: 0.4s"
+      >
+        <div class="feature-icon">
+          <img th:src="@{/images/icono_carrito.png}" alt="Compra Rápida" />
+        </div>
+        <h3>Compra Fácil y Rápida</h3>
+        <p>
+          Realiza tu pedido en minutos desde la comodidad de tu hogar, evitando el estrés y las aglomeraciones.
+        </p>
+        <div class="highlight-bar"></div>
       </div>
-    </main>
 
-    <footer
-      class="features-footer animate__animated animate__fadeIn"
-      style="animation-delay: 0.5s"
-    >
-      <p>© 2025 Tukit - Todos los derechos reservados</p>
-    </footer>
-  </body>
+      <!-- Feature 3 -->
+      <div
+              class="feature-card"
+              style="animation-delay: 0.5s"
+      >
+        <div class="feature-icon">
+          <img th:src="@{/images/icono_24horas.png}" alt="Entrega Rápida" />
+        </div>
+        <h3>Entrega en 2 Días</h3>
+        <p>
+          Recibe tu kit de útiles escolares en la puerta de tu casa en un plazo máximo de dos días hábiles.
+        </p>
+        <div class="highlight-bar"></div>
+      </div>
+
+
+      <!-- Feature 4 -->
+      <div
+              class="feature-card"
+              style="animation-delay: 0.7s"
+      >
+        <div class="feature-icon">
+          <img th:src="@{/images/icono_plataforma.png}" alt="Plataforma Digital" />
+        </div>
+        <h3>Plataforma Web y Móvil</h3>
+        <p>
+          Accede a nuestro servicio desde la web o nuestra app móvil para una experiencia más cómoda.
+        </p>
+        <div class="highlight-bar"></div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div
+              class="feature-card"
+              style="animation-delay: 0.8s"
+      >
+        <div class="feature-icon">
+          <img th:src="@{/images/icono_ahorro.png}" alt="Ahorro" />
+        </div>
+        <h3>Ahorro de Recursos</h3>
+        <p>
+          Ahorra no solo tiempo, sino también recursos, con un servicio eficiente y pensado para tu bolsillo.
+        </p>
+        <div class="highlight-bar"></div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div
+              class="feature-card"
+              style="animation-delay: 0.9s"
+      >
+        <div class="feature-icon">
+          <img th:src="@{/images/icono_calidad.png}" alt="Calidad" />
+        </div>
+        <h3>Calidad y Seguridad</h3>
+        <p>
+          Garantizamos la calidad de cada útil escolar y un proceso de compra y entrega totalmente seguro.
+        </p>
+        <div class="highlight-bar"></div>
+      </div>
+
+      <!-- Feature 7 -->
+      <div
+              class="feature-card"
+              style="animation-delay: 1s"
+      >
+        <div class="feature-icon">
+          <img th:src="@{/images/icono_bienestar.png}" alt="Bienestar Familiar" />
+        </div>
+        <h3>Bienestar Emocional </h3>
+        <p>
+          Reduce el estrés de la temporada escolar y fomenta un ambiente familiar más tranquilo y feliz.
+        </p>
+        <div class="highlight-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wave-container">
+    <div class="wave"></div>
+  </div>
+</main>
+
+<footer
+        class="features-footer animate__animated animate__fadeIn"
+        style="animation-delay: 0.5s"
+>
+  <p>© 2025 Tukit - Todos los derechos reservados</p>
+</footer>
+</body>
 </html>
