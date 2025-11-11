@@ -1,138 +1,141 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tukit - Nosotros</title>
-    <link rel="stylesheet" th:href="@{/styles/proyecto.css}" />
-    <link rel="stylesheet" th:href="@{/styles/header_footer.css}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-    <style>
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tukit - Nosotros</title>
+  <link rel="stylesheet" th:href="@{/styles/proyecto.css}" />
+  <link rel="stylesheet" th:href="@{/styles/header_footer.css}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideInFromTop {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
       }
-      @keyframes slideInFromTop {
-        from {
-          transform: translateY(-50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
+      to {
+        transform: translateY(0);
+        opacity: 1;
       }
-      @keyframes slideInFromLeft {
-        from {
-          transform: translateX(-50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
+    }
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-50px);
+        opacity: 0;
       }
-      @keyframes slideInFromRight {
-        from {
-          transform: translateX(50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
+      to {
+        transform: translateX(0);
+        opacity: 1;
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="logo" style="animation: slideInFromTop 0.8s ease-out 0.2s both">
-        <img src="/images/logo_horizontal.jpg" alt="Logo Tukit" />
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li style="animation: fadeIn 0.6s ease-out 0.4s both"><a th:href="@{/}">Inicio</a></li>
-          <li style="animation: fadeIn 0.6s ease-out 0.5s both"><a th:href="@{/caracteristicas}">Características</a></li>
-          <li class="current" style="animation: fadeIn 0.6s ease-out 0.6s both"><a th:href="@{/proyecto}">Nosotros</a></li>
-          <li style="animation: fadeIn 0.6s ease-out 0.7s both"><a th:href="@{/planes}">Planes</a></li>
-        </ul>
-      </nav>
-    </header>
+    }
+    @keyframes slideInFromRight {
+      from {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo" style="animation: slideInFromTop 0.8s ease-out 0.2s both">
+    <img src="/images/logo_horizontal.jpg" alt="Logo Tukit" />
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li style="animation: fadeIn 0.6s ease-out 0.4s both"><a th:href="@{/}">Inicio</a></li>
+      <li style="animation: fadeIn 0.6s ease-out 0.5s both"><a th:href="@{/caracteristicas}">Características</a></li>
+      <li class="current" style="animation: fadeIn 0.6s ease-out 0.6s both"><a th:href="@{/proyecto}">Nosotros</a></li>
+      <li style="animation: fadeIn 0.6s ease-out 0.7s both"><a th:href="@{/planes}">Planes</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <main class="project-main">
-      <section class="hero-section">
-        <h1>Acerca de nosotros</h1>
-        <div class="hero-wave"></div>
-      </section>
+<main class="project-main">
+  <section class="hero-section">
+    <h1>Acerca de nosotros</h1>
+    <div class="hero-wave"></div>
+  </section>
 
-      <div class="content-container">
-        <!-- Sección Visión (imagen izquierda, texto derecha) -->
-        <section class="vision-section">
-          <div class="section-content vision-layout">
-            <div class="image-container" style="animation: slideInFromLeft 0.8s ease-out 0.4s both">
-              <img src="/images/vision.jpg" alt="Imagen representando la visión" class="section-image" />
+  <div class="content-container">
+    <!-- Sección Visión (imagen izquierda, texto derecha) -->
+    <section class="vision-section">
+      <div class="section-content vision-layout">
+        <div class="image-container" style="animation: slideInFromLeft 0.8s ease-out 0.4s both">
+          <img src="/images/vision.jpg" alt="Imagen representando la visión" class="section-image" />
+        </div>
+        <div class="text-container" style="animation: slideInFromRight 0.8s ease-out 0.6s both">
+          <div class="section-header">
+            <div class="icon-circle">
+              <img src="/images/icono_vision.png" alt="Visión" />
             </div>
-            <div class="text-container" style="animation: slideInFromRight 0.8s ease-out 0.6s both">
-              <div class="section-header">
-                <div class="icon-circle">
-                  <img src="/images/icono_vision.png" alt="Visión" />
-                </div>
-                <h2>Visión</h2>
-              </div>
-              <p>
-                Ser la plataforma líder en Latinoamérica para la compra y venta de
-                libros de segunda mano, promoviendo el acceso equitativo a la
-                educación y fomentando una cultura de reutilización responsable
-                entre estudiantes, familias y lectores en general.
-              </p>
-            </div>
+            <h2>Visión</h2>
           </div>
-        </section>
-
-        <!-- Sección Misión (texto izquierda, imagen derecha) -->
-        <section class="mission-section">
-          <div class="section-content mission-layout">
-            <div class="text-container" style="animation: slideInFromLeft 0.8s ease-out 0.4s both">
-              <div class="section-header">
-                <div class="icon-circle">
-                  <img src="/images/icono_mision.png" alt="Misión" />
-                </div>
-                <h2>Misión</h2>
-              </div>
-              <p>
-                Brindar una solución confiable, accesible y eficiente para la
-                comunidad educativa y cultural, facilitando el intercambio, la
-                compra y venta de libros de segunda mano. Queremos construir una red
-                de confianza entre vendedores, compradores y aliados del ecosistema
-                educativo, donde el acceso a los libros deje de ser un privilegio y
-                se convierta en una opción para todos.
-              </p>
-            </div>
-            <div class="image-container" style="animation: slideInFromRight 0.8s ease-out 0.6s both">
-              <img src="/images/mision.jpg" alt="Imagen representando la misión" class="section-image" />
-            </div>
-          </div>
-        </section>
-
-        <section class="slogan-section">
-          <div class="slogan-box">
-            <h3>¡Arma tu-kit de historias!</h3>
-            <p>
-              Una frase que invita a descubrir, construir y compartir
-              conocimiento a través de libros que han pasado de mano en mano,
-              llevando consigo nuevas oportunidades y experiencias.
-            </p>
-          </div>
-        </section>
+          <p>
+            Ser la plataforma líder en Colombia para la adquisición personalizada de útiles escolares,
+            transformando la experiencia de compra de inicio escolar en un proceso simple, eficiente y
+            centrado en el bienestar familiar. Aspiramos a expandir nuestro servicio a nivel nacional,
+            permitiendo que miles de familias recuperen tiempo valioso y fortalezcan sus vínculos
+            mientras sus hijos participan activamente en la elección de sus útiles escolares.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="wave-container">
-        <div class="wave"></div>
+    <!-- Sección Misión (texto izquierda, imagen derecha) -->
+    <section class="mission-section">
+      <div class="section-content mission-layout">
+        <div class="text-container" style="animation: slideInFromLeft 0.8s ease-out 0.4s both">
+          <div class="section-header">
+            <div class="icon-circle">
+              <img src="/images/icono_mision.png" alt="Misión" />
+            </div>
+            <h2>Misión</h2>
+          </div>
+          <p>
+            Ofrecer un servicio integral de selección, compra y entrega de útiles escolares que
+            elimine el estrés y las largas filas de la temporada escolar. A través de nuestra
+            plataforma web y aplicación móvil, empoderamos a los niños para que elijan sus útiles
+            preferidos, mientras garantizamos a los padres ahorro de tiempo, recursos y tranquilidad.
+            Nos comprometemos con la calidad, seguridad y puntualidad en cada entrega, contribuyendo
+            al bienestar emocional de las familias en la localidad de Suba y fortaleciendo el tiempo
+            que dedican a lo verdaderamente importante: estar juntos.
+          </p>
+        </div>
+        <div class="image-container" style="animation: slideInFromRight 0.8s ease-out 0.6s both">
+          <img src="/images/mision.jpg" alt="Imagen representando la misión" class="section-image" />
+        </div>
       </div>
-    </main>
+    </section>
 
-    <footer class="features-footer">
-      <p>© 2025 Tukit - Todos los derechos reservados</p>
-    </footer>
-  </body>
+    <section class="slogan-section">
+      <div class="slogan-box">
+        <h3>Menos filas, más tiempo en familia</h3>
+        <p>
+          Porque entendemos que los momentos con tus hijos son invaluables,
+          Tukit transforma la compra de útiles escolares en una experiencia
+          rápida, personalizada y sin complicaciones. Recupera tu tiempo y
+          dedícalo a lo que realmente importa.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div class="wave-container">
+    <div class="wave"></div>
+  </div>
+</main>
+
+<footer class="features-footer">
+  <p>© 2025 Tukit - Todos los derechos reservados</p>
+</footer>
+</body>
 </html>
